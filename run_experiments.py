@@ -10,14 +10,16 @@ DATASET_YAML = 'data.yaml'
 # 2. 实验项目名称 (输出文件夹名)
 PROJECT_NAME = 'Airport_GSE_Detection_Research'
 
-# 3. 对比模型列表
-# 截图显示你已有 v8n 和 v11n，其他的模型脚本会自动下载
+# 3. 对比模型列表 (你指定的7个模型)
 models_config = {
-    'YOLOv5n': 'yolov5nu.pt',  # Anchor-free 版本
-    'YOLOv8n': 'yolov8n.pt',   # 你的基线
-    'YOLOv9t': 'yolov9t.pt',   # 小目标强
-    'YOLOv10n': 'yolov10n.pt', # 无NMS，速度快
-    'YOLOv11n': 'yolo11n.pt'   # 最新SOTA
+    'YOLOv5n': 'yolov5n.pt',   # Nano版: 极小，速度快
+    'YOLOv5s': 'yolov5s.pt',   # Small版: 精度比n高，参数量稍大 (增加这个对比非常有意义)
+    'YOLOv6n': 'yolov6n.pt',    # 专注于推理FPS的工业模型
+    'YOLOv8s': 'yolov8s.pt',    # 目前应用最广泛的标准
+    'YOLOv8n': 'yolov8n.pt',    # 目前应用最广泛的标准
+    'YOLOv9t': 'yolov9t.pt',    # PGI架构，优化特征传输
+    'YOLOv10n': 'yolov10n.pt',  # 无NMS技术，端到端检测
+    'YOLOv11n': 'yolov11n.pt'    # 2024/2025 最新最强版本
 }
 
 # 4. 科研级超参数 (针对 4类机场地勤目标 + 500张小样本优化)
