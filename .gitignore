@@ -1,0 +1,62 @@
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# YOLO 训练输出
+runs/
+logs/
+
+# 数据集（大文件）
+data/
+datasets/
+*.tar
+*.zip
+
+# 模型权重（大文件）
+*.pt
+*.pth
+*.weights
+
+# 缓存和临时文件
+*.cache
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 其他
+.env
+.env.local
+config_local.py
